@@ -1,0 +1,94 @@
+execve("./parent", ["./parent"], 0x7fff95499520 /* 26 vars */) = 0
+brk(NULL)                               = 0x56468466d000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe60b99b50) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8db6c51000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=31019, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 31019, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8db6c49000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8db6a21000
+mmap(0x7f8db6a49000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f8db6a49000
+mmap(0x7f8db6bde000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f8db6bde000
+mmap(0x7f8db6c36000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f8db6c36000
+mmap(0x7f8db6c3c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8db6c3c000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8db6a1e000
+arch_prctl(ARCH_SET_FS, 0x7f8db6a1e740) = 0
+set_tid_address(0x7f8db6a1ea10)         = 540
+set_robust_list(0x7f8db6a1ea20, 24)     = 0
+rseq(0x7f8db6a1f0e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f8db6c36000, 16384, PROT_READ) = 0
+mprotect(0x56464ded8000, 4096, PROT_READ) = 0
+mprotect(0x7f8db6c8b000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f8db6c49000, 31019)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+getrandom("\xc5\xf3\xe6\xc8\x2a\x1c\x5c\xb6", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x56468466d000
+brk(0x56468468e000)                     = 0x56468468e000
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+read(0, "gh1\n", 1024)                  = 4
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+read(0, "gh2\n", 1024)                  = 4
+openat(AT_FDCWD, "gh1", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 3
+openat(AT_FDCWD, "gh2", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 4
+openat(AT_FDCWD, "/dev/shm/my_shm1", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0666) = 5
+ftruncate(5, 1028)                      = 0
+mmap(NULL, 1028, PROT_READ|PROT_WRITE, MAP_SHARED, 5, 0) = 0x7f8db6c8a000
+openat(AT_FDCWD, "/dev/shm/my_shm2", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0666) = 6
+ftruncate(6, 1028)                      = 0
+mmap(NULL, 1028, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f8db6c50000
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f8db6a1ea10) = 669
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f8db6a1ea10) = 670
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "qwerty\n", 1024)               = 7
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000}, NULL) = 0
+write(4, "ytrewq", 6)                   = 6
+write(4, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "asdf\n", 1024)                 = 5
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000}, NULL) = 0
+write(4, "fdsa", 4)                     = 4
+write(4, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "zxcv\n", 1024)                 = 5
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000}, NULL) = 0
+write(3, "vcxz", 4)                     = 4
+write(3, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "hello\n", 1024)                = 6
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000}, NULL) = 0
+write(3, "olleh", 5)                    = 5
+write(3, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "kuku\n", 1024)                 = 5
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000}, NULL) = 0
+write(3, "ukuk", 4)                     = 4
+write(3, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "exit\n", 1024)                 = 5
+munmap(0x7f8db6c8a000, 1028)            = 0
+munmap(0x7f8db6c50000, 1028)            = 0
+close(5)                                = 0
+close(6)                                = 0
+unlink("/dev/shm/my_shm1")              = 0
+unlink("/dev/shm/my_shm2")              = 0
+kill(669, SIGTERM)                      = 0
+kill(670, SIGTERM)                      = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=669, si_uid=1000, si_status=0, si_utime=48, si_stime=163} ---
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=670, si_uid=1000, si_status=0, si_utime=50, si_stime=176} ---
+wait4(-1, NULL, 0, NULL)                = 669
+wait4(-1, NULL, 0, NULL)                = 670
+close(3)                                = 0
+close(4)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
