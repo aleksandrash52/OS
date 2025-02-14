@@ -1,0 +1,68 @@
+execve("./parent", ["./parent"], 0x7fffca8d5440 /* 26 vars */) = 0
+brk(NULL)                               = 0x56076f194000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcc4da7a30) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f35484c9000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=31019, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 31019, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f35484c1000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3548299000
+mmap(0x7f35482c1000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f35482c1000
+mmap(0x7f3548456000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f3548456000
+mmap(0x7f35484ae000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f35484ae000
+mmap(0x7f35484b4000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f35484b4000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3548296000
+arch_prctl(ARCH_SET_FS, 0x7f3548296740) = 0
+set_tid_address(0x7f3548296a10)         = 11985
+set_robust_list(0x7f3548296a20, 24)     = 0
+rseq(0x7f35482970e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f35484ae000, 16384, PROT_READ) = 0
+mprotect(0x560744a2f000, 4096, PROT_READ) = 0
+mprotect(0x7f3548503000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f35484c1000, 31019)           = 0
+pipe2([3, 4], 0)                        = 0
+pipe2([5, 6], 0)                        = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x5b\xde\x75\x35\xab\x49\xc4\x39", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x56076f194000
+brk(0x56076f1b5000)                     = 0x56076f1b5000
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}, AT_EMPTY_PATH) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+read(0, "txt1\n", 1024)                 = 5
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+read(0, "txt2\n", 1024)                 = 5
+openat(AT_FDCWD, "txt1", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 7
+openat(AT_FDCWD, "txt2", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 8
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f3548296a10) = 12015
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f3548296a10) = 12016
+close(3)                                = 0
+close(5)                                = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "hrllo\n", 1024)                = 6
+write(4, "hrllo\0", 6)                  = 6
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "bye\n", 1024)                  = 4
+write(6, "bye\0", 4)                    = 4
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203 (\320\270\320"..., 73) = 73
+read(0, "exit\n", 1024)                 = 5
+close(4)                                = 0
+close(6)                                = 0
+kill(12015, SIGTERM)                    = 0
+kill(12016, SIGTERM)                    = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=12015, si_uid=1000, si_status=SIGTERM, si_utime=0, si_stime=0} ---
+wait4(-1, NULL, 0, NULL)                = 12015
+wait4(-1, NULL, 0, NULL)                = 12016
+close(7)                                = 0
+close(8)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
